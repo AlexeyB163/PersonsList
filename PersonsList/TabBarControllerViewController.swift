@@ -24,7 +24,8 @@ class TabBarControllerViewController: UITabBarController {
             if let navigationVC = $0 as? UINavigationController {
                 if let personVC = navigationVC.topViewController as? PersonsListViewController {
                     personVC.data = data
-                } else if let detailsVC = navigationVC.topViewController as? DetailListTableViewController {
+                }
+                if let detailsVC = navigationVC.topViewController as? DetailListTableViewController {
                     detailsVC.data = data
                 }
             }
