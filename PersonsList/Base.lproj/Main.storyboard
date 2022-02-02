@@ -141,11 +141,11 @@
             </objects>
             <point key="canvasLocation" x="2239.1999999999998" y="26.53673163418291"/>
         </scene>
-        <!--detail contacts-->
+        <!--Detail contacts-->
         <scene sceneID="iFq-48-bad">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="X6Q-lk-bp3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="detail contacts" image="info.circle.fill" catalog="system" id="Rzn-8R-dcE"/>
+                    <tabBarItem key="tabBarItem" title="Detail contacts" image="info.circle.fill" catalog="system" id="Rzn-8R-dcE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="W3I-BC-Q8l">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>

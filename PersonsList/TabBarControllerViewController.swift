@@ -17,20 +17,15 @@ class TabBarControllerViewController: UITabBarController {
     }
     
     private func loadDataUsersForVC() {
-        
         guard let viewControllers = viewControllers else { return }
-
         viewControllers.forEach {
             if let navigationVC = $0 as? UINavigationController {
                 if let personVC = navigationVC.topViewController as? PersonsListViewController {
                     personVC.data = data
-                }
-                if let detailsVC = navigationVC.topViewController as? DetailListTableViewController {
+                } else if let detailsVC = navigationVC.topViewController as? DetailListTableViewController {
                     detailsVC.data = data
                 }
             }
         }
     }
-    
-    
 }

@@ -9,7 +9,6 @@ import UIKit
 
 class ContactUserViewController: UIViewController {
 
-    
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var eMailLabel: UILabel!
     

@@ -6,22 +6,15 @@
 //
 
 import UIKit
-protocol PersonListProtocol {
-    func loadingDataModel() -> [Person]
-}
 
 class PersonsListViewController: UITableViewController {
     
     var data:[Person] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         data.count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "user", for: indexPath)
         var content = cell.defaultContentConfiguration()
@@ -38,7 +31,6 @@ class PersonsListViewController: UITableViewController {
         contactVC.indexPath = indexPath ?? 0
         contactVC.data = data
     }
-    
 }
 
 
