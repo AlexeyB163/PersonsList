@@ -36,18 +36,27 @@ class DetailListTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "userData", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userData", for: indexPath)
+        
+        let person = data[indexPath.section]
         var content = cell.defaultContentConfiguration()
         
-        if indexPath.row == 0 {
-            content.image = UIImage(systemName: "phone")
-            content.text = data[indexPath.section].phone
-        } else if indexPath.row == 1 {
-            content.image = UIImage(systemName: "mail")
-            content.text = data[indexPath.section].eMail
+        
+        switch indexPath.row {
+        case 0:
+            content.image = UIImage(systemName: Person.Contacts.phone.rawValue)
+            content.text = person.phone
+        default:
+            content.image = UIImage(systemName: Person.Contacts.email.rawValue)
+            content.text = person.eMail
         }
         
         cell.contentConfiguration = content
+         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
