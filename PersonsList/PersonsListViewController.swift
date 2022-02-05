@@ -27,9 +27,8 @@ class PersonsListViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let contactVC = segue.destination as? ContactUserViewController else { return }
-        let indexPath = tableView.indexPathForSelectedRow?.row
-        contactVC.indexPath = indexPath ?? 0
-        contactVC.data = data
+        guard let indexPath = tableView.indexPathForSelectedRow?.row else { return }
+        contactVC.data = data[indexPath]
     }
 }
 

@@ -12,16 +12,16 @@ class ContactUserViewController: UIViewController {
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var eMailLabel: UILabel!
     
-    var data:[Person] = []
-    var indexPath:Int = 0
+    var data:Person!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = data[indexPath].fullName
+        navigationItem.title = data.fullName
         navigationController?.navigationBar.backgroundColor = .systemGray5
         
-        phoneLabel.text = "Phone: \(data[indexPath].phone)"
-        eMailLabel.text = "Email: \(data[indexPath].eMail)"
+        phoneLabel.text = "Phone: \(data.phone)"
+        eMailLabel.text = "Email: \(data.eMail)"
         
     }
 
