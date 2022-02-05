@@ -8,6 +8,8 @@
 
 class DataManager {
     
+    static let dataManager = DataManager()
+    
     let firstName = ["Мария", "Евгения", "Екатерина", "Татьяна", "Виктория",
                      "Ольга", "Надежда", "Марина", "Галина", "Анастасия" ]
     
@@ -20,4 +22,6 @@ class DataManager {
     
     let eMail = ["a@mail.ru", "b@mail.ru", "c@mail.ru", "e@mail.ru", "f@mail.ru",
                  "g@mail.ru", "h@mail.ru", "i@mail.ru", "j@mail.ru", "k@mail.ru"]
+    
+    private init() {}
 }

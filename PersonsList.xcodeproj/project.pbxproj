@@ -71,8 +71,8 @@
 				CE1F4ED327A9CCC500EF3302 /* TabBarControllerViewController.swift */,
 				CE1F4ECD27A98D4D00EF3302 /* DetailListTableViewController.swift */,
 				CE1F4E8A27A66F4100EF3302 /* AppDelegate.swift */,
-				CE1F4EA327A6AE3B00EF3302 /* Model */,
-				CE1F4EA427A6AED900EF3302 /* Data Manager */,
+				CE1F4EA327A6AE3B00EF3302 /* Models */,
+				CE1F4EA427A6AED900EF3302 /* Services */,
 				CE1F4E9027A66F4100EF3302 /* Main.storyboard */,
 				CE1F4E8C27A66F4100EF3302 /* SceneDelegate.swift */,
 				CE1F4E9327A66F4500EF3302 /* Assets.xcassets */,
@@ -82,20 +82,20 @@
 			path = PersonsList;
 			sourceTree = "<group>";
 		};
-		CE1F4EA327A6AE3B00EF3302 /* Model */ = {
+		CE1F4EA327A6AE3B00EF3302 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				CE1F4EA027A6AE0C00EF3302 /* Person.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		CE1F4EA427A6AED900EF3302 /* Data Manager */ = {
+		CE1F4EA427A6AED900EF3302 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				CE1F4E9E27A6707200EF3302 /* DataManager.swift */,
 			);
-			path = "Data Manager";
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
