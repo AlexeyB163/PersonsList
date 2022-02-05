@@ -13,40 +13,38 @@ struct Person {
     let eMail: String
     
     var fullName:String {
-        firstName + " " + lastName
+        "\(firstName) \(lastName)"
     }
     
-    static func getRandomDataUser () -> [Person] {
-        let dataManager = DataManager()
-        var userRepository = [Person(firstName: dataManager.firstName.randomElement()!,
-                          lastName: dataManager.lastName.randomElement()!,
-                          phone: dataManager.phone.randomElement()!,
-                          eMail: dataManager.eMail.randomElement()!)]
-        while userRepository.count < dataManager.firstName.count {
-            let temp = Person(
-                            firstName: dataManager.firstName.randomElement()!,
-                              lastName: dataManager.lastName.randomElement()!,
-                              phone: dataManager.phone.randomElement()!,
-                              eMail: dataManager.eMail.randomElement()!)
-            
-            if !userRepository.contains(where: {
-                $0.firstName == temp.firstName
-            }) &&
-                !userRepository.contains(where: {
-                $0.lastName == temp.lastName
-            }) &&
-                !userRepository.contains(where: {
-                    $0.phone == temp.phone
-            }) &&
-                !userRepository.contains(where: {
-                    $0.eMail == temp.eMail
-                }) {
-                userRepository.append(temp)
-            }
-        }
-        return userRepository
-        }
 }
+
+extension Person {
+    static func getRandomDataUsers () -> [Person] {
+        
+        var persons:[Person] = []
+        
+        let firstNames = DataManager.dataManager.firstName.shuffled()
+        let lastNames = DataManager.dataManager.lastName.shuffled()
+        let phone = DataManager.dataManager.phone.shuffled()
+        let email = DataManager.dataManager.eMail.shuffled()
+        
+        let iterationCount = min(firstNames.count,lastNames.count, phone.count, email.count)
+        
+        for index in 1...iterationCount {
+            let person = (
+            Person(
+                firstName: firstNames[index],
+                lastName: lastNames[index],
+                phone: phone[index],
+                eMail: email[index])
+            )
+            persons.append(person)
+        }
+        return persons
+    }
+        
+}
+
 
 
 
