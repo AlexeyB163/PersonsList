@@ -30,7 +30,7 @@ extension Person {
         
         let iterationCount = min(firstNames.count,lastNames.count, phone.count, email.count)
         
-        for index in 1...iterationCount {
+        for index in 0..<iterationCount {
             let person = (
             Person(
                 firstName: firstNames[index],
@@ -41,8 +41,12 @@ extension Person {
             persons.append(person)
         }
         return persons
-    }
+    } 
         
+    enum Contacts: String {
+        case phone = "phone"
+        case email = "mail"
+    }
 }
 
 
