@@ -17,7 +17,7 @@ class ContactUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = data.fullName
+        title = data.fullName
         navigationController?.navigationBar.backgroundColor = .systemGray5
         
         phoneLabel.text = "Phone: \(data.phone)"
